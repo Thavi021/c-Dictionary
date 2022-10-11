@@ -1,0 +1,23 @@
+ICE TASK 4 – Dictionary and Recursion
+
+Create a dictionary to store parent (province or city) which is the key and their leaf nodes (province or city). The items in the dictionary should be stored as follows:
+•	Key: province or city
+•	Value: index of the parent (key)
+For example:
+Dictionary.add(“South Africa”, -1) South Africa should be the first as all the provinces and cities belong to South Africa
+Dictionary.add(“Gauteng”, 0) Gauteng belong to South Africa
+Dictionary.add(“Pretoria”, 1) Pretoria belong to Gauteng
+Dictionary.add(“Cape Town”, 0) You can add Western Cape as a parent for Cape Town, otherwise South Africa will be the parent
+Etc… (Please add 4 more entries)
+
+Now, to answer the question: use recursion to print out the parents and their leaf node. FindParent method takes leaf node as a parameter. See below sample input and output
+Input	Expected output
+FindParent(“Gauteng”)	South Africa
+Gauteng
+FindParent(“Pretoria”)	South Africa
+Gauteng
+Pretoria
+
+Please only submit the code and not the entire VS project.
+
+
