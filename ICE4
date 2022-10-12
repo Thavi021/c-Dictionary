@@ -1,23 +1,160 @@
-ICE TASK 4 – Dictionary and Recursion
+//ST10120981 Thaveshan Naidoo 
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-Create a dictionary to store parent (province or city) which is the key and their leaf nodes (province or city). The items in the dictionary should be stored as follows:
-•	Key: province or city
-•	Value: index of the parent (key)
-For example:
-Dictionary.add(“South Africa”, -1) South Africa should be the first as all the provinces and cities belong to South Africa
-Dictionary.add(“Gauteng”, 0) Gauteng belong to South Africa
-Dictionary.add(“Pretoria”, 1) Pretoria belong to Gauteng
-Dictionary.add(“Cape Town”, 0) You can add Western Cape as a parent for Cape Town, otherwise South Africa will be the parent
-Etc… (Please add 4 more entries)
+namespace ProgICE4
+{
+    class Program
+    {
+        static Dictionary<string, string> dc = new Dictionary<string, string>();
 
-Now, to answer the question: use recursion to print out the parents and their leaf node. FindParent method takes leaf node as a parameter. See below sample input and output
-Input	Expected output
-FindParent(“Gauteng”)	South Africa
-Gauteng
-FindParent(“Pretoria”)	South Africa
-Gauteng
-Pretoria
+        static void Main(string[] args)
+        {
+            {
+                dc.Add("South Africa", "0");
 
-Please only submit the code and not the entire VS project.
+
+
+                dc.Add("Gauteng", "1");
+
+
+
+                dc.Add("Pretoria", "2");
+
+
+                dc.Add("Cape Town", "3");
+
+
+                dc.Add("Rustenburg", "4");
+
+
+                dc.Add("Centurion", "5");
+
+
+                dc.Add("Kalyami", "6");
+
+
+                dc.Add("Soweto", "7");
+
+
+                dc.Add("Eastern Cape", "8");
+                //Add at least 7 other entries
+
+            }
+
+            Console.Write("Enter leaf node 1:");
+            string leafName1 = Console.ReadLine();
+
+          //  Console.Write("Enter leaf node 2: ");
+           // string leafName2 = Console.ReadLine();
+
+            //Console.Write("Enter leaf node 3: ");
+            //string leafName3 = Console.ReadLine();
+
+            //Console.Write("Enter leaf node 4: ");
+            //string leafName4 = Console.ReadLine();
+
+            //Console.Write("Enter leaf node 5: ");
+            //string leafName7 = Console.ReadLine();
+
+            //Console.Write("Enter leaf node 6: ");
+            //string leafName8 = Console.ReadLine();
+
+            //Console.Write("Enter leaf node 7: ");
+            string leafName9 = Console.ReadLine();
+            Console.WriteLine("====OUTPUT====\n");
+
+            findParent(leafName1);
+
+            //Console.Read(leafName);
+
+
+           // findParent(leafName2);
+           // Console.Read();
+
+
+
+        }
+
+
+        //Use recursive to print out parents and their leaf node
+        private static void findParent(string leafName)
+        {
+
+            if (leafName == "South Africa")
+            {
+                var myKey1 = dc.FirstOrDefault(x => x.Value == "0").Key;
+                Console.WriteLine(myKey1);
+            }
+
+            if (leafName == "Gauteng") {
+                var myKey2 = dc.FirstOrDefault(x => x.Value == "1").Key;
+                Console.WriteLine(myKey2);
+            }
+
+            if (leafName == "Pretoria")
+            {
+                var myKey3 = dc.FirstOrDefault(x => x.Value == "2").Key;
+                Console.WriteLine(myKey3);
+            }
+            if (leafName == "Cape Town")
+            {
+                var myKey4 = dc.FirstOrDefault(x => x.Value == "3").Key;
+                Console.WriteLine(myKey4);
+            }
+
+            if(leafName == "")
+            { 
+            var myKey5 = dc.FirstOrDefault(x => x.Value == "3").Key;
+            Console.WriteLine(myKey5);
+            }
+
+            if (leafName == "Rustenburg")
+            {
+                var myKey6 = dc.FirstOrDefault(x => x.Value == "4").Key;
+                Console.WriteLine(myKey6);
+            }
+
+            if (leafName == "Rustenburg")
+            {
+                var myKey7 = dc.FirstOrDefault(x => x.Value == "5").Key;
+                Console.WriteLine(myKey7);
+            }
+
+
+            if (leafName == "Kalyami")
+            {
+                var myKey8 = dc.FirstOrDefault(x => x.Value == "6").Key;
+                Console.WriteLine(myKey8);
+
+            }
+
+            if (leafName == "Soweto")
+            {
+                var myKey9 = dc.FirstOrDefault(x => x.Value == "7").Key;
+                Console.WriteLine(myKey9);
+            }
+
+            if (leafName == "Eastern Cape")
+            {
+                var myKey10 = dc.FirstOrDefault(x => x.Value == "8").Key;
+                Console.WriteLine(myKey10);
+            }
+
+
+     
+            }
+
+
+
+        }
+
+    }
+
+
+
+
+
 
 
