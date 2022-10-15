@@ -1,0 +1,59 @@
+        private void IdentifyAreaButton2_Click(object sender, RoutedEventArgs e)
+        {
+
+            int score = 0;
+            if (TextboxE.Text == "000")
+            {
+
+                string leafName1 = TextboxE.Text;
+                findParent(leafName1);
+
+                checkbox1.IsChecked = true;
+                score = score + 1;
+
+            }
+            if (TextboxF.Text == "200")
+            {
+                string leafName1 = TextboxF.Text;
+                findParent(leafName1);
+
+                checkbox2.IsChecked = true;
+                score = score + 1;
+            }
+            if (TextboxG.Text == "400")
+            {
+                string leafName1 = TextboxG.Text;
+                findParent(leafName1);
+
+                checkbox3.IsChecked = true;
+                score = score + 1;
+            }
+
+            if (TextboxDisplayRandom2.Text == "Computer Science")
+            {
+                string leafName1 = TextboxDisplayRandom2.Text;
+                findParent(leafName1);
+
+                checkbox3.IsChecked = true;
+                score = score + 1;
+            }
+
+            if (TextboxDisplayRandom4.Text == "Religion")
+            {
+                string leafName1 = TextboxDisplayRandom4.Text;
+                findParent2(leafName1);
+
+                checkbox3.IsChecked = true;
+                score = score + 1;
+            }
+
+            if (TextboxDisplayRandom6.Text == "Language")
+            {
+                string leafName1 = TextboxDisplayRandom6.Text;
+                findParent2(leafName1);
+
+                checkbox3.IsChecked = true;
+                score = score + 1;
+            }
+
+        }
